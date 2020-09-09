@@ -1,0 +1,58 @@
+@headerHeight: 80px;
+@footerHeight: 100px;
+
+.page-wrapper {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 150px auto;
+  grid-template-rows: 80px auto 100px;
+  grid-template-areas:
+  "header header"
+  "sidebar content"
+  "footer footer";
+
+  &__header {
+    grid-area: header;
+    height: @headerHeight;
+    border-bottom: 1px solid white;
+    box-sizing: border-box;
+    text-align: center;
+  }
+
+  &__footer {
+    grid-area: footer;
+    height: @footerHeight;
+  }
+
+  &__content {
+    flex: 1;
+    display: contents;
+  }
+}
+
+.content {
+  height: 100%;
+  overflow: hidden;
+
+  &__sidebar {
+    width: 150px;
+    background-color: #06031d;
+    border-bottom: 1px solid white;
+    border-right: 1px solid white;
+    box-sizing: border-box;
+    grid-area: sidebar;
+  }
+
+  &__chat {
+    flex: 1;
+    background-color: grey;
+    border-bottom: 1px solid white;
+    grid-area: content;
+    overflow: hidden;
+  }
+}
+
+.footer {
+  overflow: auto;
+  height: 100%;
+}

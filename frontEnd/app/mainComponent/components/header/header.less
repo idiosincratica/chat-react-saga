@@ -1,0 +1,40 @@
+.header {
+  height: 100%;
+  background-color: #06031d;
+
+  &__title {
+    display: block;
+    overflow: hidden;
+    font-size: 24px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #ffffff;
+    padding: 10px 30px 5px;
+    width: fit-content;
+    margin: auto;
+  }
+
+  &__user-name {
+    color: white;
+  }
+  
+  &__settings-button{
+    width: 100px;
+    height: 30px;
+    position: absolute;
+    top: 23px;
+    right: 27px;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid white;
+    font: inherit;
+    color: #ffffff;
+    background-color: #06031d;
+    box-shadow: 0 0 40px rgba(0,0,0,.5);
+    cursor: pointer;
+  }
+  
+  &__settings-button:active{
+    background: #03a9f4;
+  }
+}
